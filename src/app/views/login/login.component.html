@@ -1,22 +1,22 @@
 <div class="p-grid p-justify-center card">
     <div class="p-col-10 p-sm-6 p-md-4">
         <p-card>
-            <div class="p-grid text-center">
-                <div class="p-col-12">
-                    <h2>Car Sales</h2>
+            <div class="p-grid">
+                <div class="p-col-12 text-center">
                     <i class="material-icons" style="font-size:  50px; color: #007AD9;" >directions_car</i>
+                    <h2>Car Sales</h2>
 
                 </div>
                 <div class="p-col-12">
                     <label for="">Usuário:</label>
-                    <input  class="p-col-12" type="text" pInputText />
+                    <input [(ngModel)]="requestLogin.login" class="p-col-12" type="text" pInputText />
                 </div>
                 <div class="p-col-12">
                     <label for="">Senha:</label>
-                    <input class="p-col-12" type="text" pInputText />
+                    <input [(ngModel)]="requestLogin.password" class="p-col-12" type="password" pInputText />
                 </div>
                 <div class="p-col-12">
-                    <button class="p-col-12" pButton type="button" label="Entrar" ></button>
+                    <button (click)="doLogin()" class="p-col-12" pButton type="button" label="Entrar" ></button>
                 </div>
             </div>
         </p-card>
